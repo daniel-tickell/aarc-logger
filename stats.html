@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AARC GOTA Stats</title>
+    <style type="text/css">
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+    <center>
+    <h1>AARC GOTA Logging</h1>
+    <title>AARC GET ON THE AIR!</title>
+    <h2>Get On The Air!!</h2>
+  </center>
+  </div>
+    <div id="chart-container">
+      <h2>Contacts Leader board</h2>
+      <canvas id="callsign"></canvas>
+    </div>
+    <div id="chart-container2">
+      <h2>Source Grid Leader board</h2>
+      <canvas id="grid"></canvas>
+
+    </div>
+    <div id="chart-container3">
+      <h2>Dest Grid Leader board</h2>
+      <canvas id="grid_dest"></canvas>
+
+    </div>
+
+    <div id="chart-container4">
+      <h2>Contacts by Band</h2>
+      <canvas id="bands"></canvas>
+
+    </div>
+    <!-- javascript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+    <script type="text/javascript" src="js/qsos.js"></script>
+    <script type="text/javascript" src="js/grid.js"></script>
+    <script type="text/javascript" src="js/grid_dest.js"></script>
+    <script type="text/javascript" src="js/bands.js"></script>
+
+
+  </body>
+</html>
+
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900);
+
+.layout {
+
+  display: grid;
+  grid:
+    "header header  " auto
+    "chart-container chart-container2 " auto
+    "chart-container3 chart-container4 " auto
+    "body body" auto
+    "footer footer" auto;
+
+  gap: 8px;
+  grid-auto-flow: row dense;
+  grid-template-columns: fit-content(300px) fit-content(1000px);
+}
+
+
+.header { 
+  grid-area: header; 
+  background-color: #04AA6D;
+  color: white;
+}
+
+.chart-container { grid-area: chart-container; }
+.left2 { grid-area: leftSide2; }
+.chart-container2 { grid-area: chart-container2; }
+.right2 { grid-area: rightSide2; }
+.body { grid-area: body; }
+.footer { grid-area: footer; }
+
+      #chart-container {
+        width: 40%;
+        height: auto;
+      }
+      #chart-container2 {
+        width: 40%;
+        height: auto;
+      }
+            #chart-container3 {
+        width: 40%;
+        height: auto;
+      }
+      #chart-container4 {
+        width: 40%;
+        height: auto;
+      }
+
+
+h1,
+p,
+a{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato';
+}
+
+h1 {
+  font-size: 2.8em;
+  padding: 10px 0;
+  font-weight: 800;
+}
+h2 {
+  font-size: 2.8em;
+  padding: 10px 0;
+  font-weight: 800;
+  font-family: 'Lato';
+}
+h3 {
+  font-size: 1.0em;
+  font-weight: 600;
+  font-family: 'Lato';
+}
+
+p {
+  font-size: 1.1em;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+
+table{
+  font-size: 1em;
+  padding: 10px 0;
+  font-weight: 500;
+  font-family: 'Lato';
+}
